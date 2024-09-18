@@ -1,0 +1,22 @@
+<div class=" h-full w-full">
+    <div class="w-full relative ">
+        <a href="" class="absolute flex items-center"> <mat-icon class="mat-18">keyboard_arrow_left</mat-icon> Back</a>
+        <p class="text-center mb-2 text-3xl">Continue as ...</p>
+        <p class="text-center text-lg mb-16">Create an account for tools to help you</p>
+    </div>
+    <div class="flex justify-around items-center">
+        <div (click)="move('/new-candidate')"
+            class="cursor-pointer flex items-center justify-between duration-150 ease-out flex-col p-6 hover:border hover:border-primary hover:shadow-xl hover:scale-110 hover:rounded-md">
+            <img class="w-[500px] object-cover" src="/assets/img/candidate.svg" alt="">
+            <p class="text-4xl font-extralight">Job Seeker</p>
+        </div>
+        <div class="text-xl">
+            OR
+        </div>
+        <div (click)="move('/new-employer')"
+            class="cursor-pointer flex items-center justify-between duration-150 ease-out flex-col p-6 hover:border hover:border-primary hover:shadow-xl hover:scale-110 hover:rounded-md">
+            <img class="w-[500px] object-cover" src="/assets/img/employer.svg" alt="">
+            <p class="text-4xl font-extralight mt-12">Employer</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+  <label [for]="title" *ngIf="lable.length" class="font-semibold">
+    {{ lable }}
+    <span *ngIf="required" class="font-extrabold text-red-900">*</span>
+  </label>
+  <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
+    <!-- Left Icon -->
+    <ng-content select="[left-icon]"></ng-content>
+    
+    <!-- Input Field -->
+    <ng-content select="[input]"></ng-content>
+   
+
+    <!-- Right Icon -->
+    <ng-content select="[right-icon]"></ng-content>
+  </div>
+</div>

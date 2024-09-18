@@ -11,7 +11,7 @@ module.exports = {
         'primary-dark': '#511859',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'], // Adding Poppins as the default sans-serif font
+        sans: ['Poppins', 'sans-serif'], 
       },
     },
   },

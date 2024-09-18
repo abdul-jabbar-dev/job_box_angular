@@ -1,0 +1,81 @@
+ 
+<div class="h-full">
+    <div class='max-w-2xl h-[80vh] rounded-b-full absolute top-0 left-1/2 -translate-x-1/2 overflow-hidden z-0'>
+        <img [@fadeAnimation]="fadeState" [src]="imgs[currentImageIndex]" alt="Slideshow image"
+            class='object-cover h-full w-full ' />
+
+    </div>
+    <div class=' container justify-center mx-auto h-full w-full flex items-center z-10 relative'>
+        <div class='flex w-full'>
+            <div class='w-1/2 flex flex-col items-start'>
+                <h1 id='hero-title' class='heroElement font-bold text-7xl rightToLeft'>
+                    Find the
+                    <span
+                        class="before:bg-primary before:absolute text-white before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-[110%] before:h-[120%] before:z-[-1] before:-skew-x-12 relative z-10">
+                        perfect
+                    </span>
+                    <br /> job for you
+                </h1>
+
+
+
+                <p id='hero-subtitle' class='mt-5 text-lg'>
+                    Search your career opportunity through 12,800 jobs
+                </p>
+                <div id='search-container'
+                    class='bg-white rounded-full p-3 flex w-full max-w-xl overflow-hidden mt-5 shadow-lg'>
+                    <input class='flex-auto text-lg p-2 border-none outline-none focus:ring-0' type='text' name='search'
+                        id='search' placeholder='Job title or Keyword' />
+                    <button id='search-button'
+                        class='p-2 rounded-full bg-primary hover:bg-primary-lite active:bg-primary-dark h-14 w-14 grid place-items-center slide-in'>
+                        <mat-icon style="color: #ffffff;" fontIcon="search"></mat-icon>
+                    </button>
+                </div>
+
+
+                <div class="mt-16">
+                    <h2 class="badge-container">Popular Search</h2>
+                    <div class="mt-3 max-w-xl flex flex-wrap gap-3" [@listAnimation]>
+                        <div *ngFor="let item of items"
+                            class="animated-item bg-primary-lite/10 text-primary/70 font-light w-fit px-2 py-1 rounded-full text-sm">
+                            <p>{{ item }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='flex flex-col justify-between '>
+                <div class='my-4 rounded-3xl shadow-2xl p-7 bg-white relative left-[80%] movable'
+                    [style.transform]="transform1">
+                    <div>
+                        <span class='text-2xl font-bold'>319 </span>
+                        <span>Job offers</span>
+                    </div>
+                    <p class='font-light text-gray-500'>
+                        In Business Development
+                    </p>
+                </div>
+                <div class='my-4 rounded-3xl shadow-2xl p-7 bg-white relative left-[60%] movable'
+                    [style.transform]="transform2">
+                    <div>
+                        <span class='text-2xl font-bold'>265 </span>
+                        <span>Job offers</span>
+                    </div>
+                    <p class='font-light text-gray-500'>
+                        In Marketing & Communication
+                    </p>
+                </div>
+                <div class='my-4 rounded-3xl shadow-2xl p-7 bg-white relative left-[40%] movable'
+                    [style.transform]="transform3">
+                    <div>
+                        <span class='text-2xl font-bold'>324 </span>
+                        <span>Job offers</span>
+                    </div>
+                    <p class='font-light text-gray-500'>In Project Management</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
