@@ -1,13 +1,15 @@
 <div class="root-layout ">
   <div class=" mx-auto">
 
-    <!-- Header -->
     <app-header></app-header>
 
-    <div class="main-content w-full h-full bg-gray-50">
-      <div class="container mx-auto w-full h-full">
-        <br>
-        <router-outlet></router-outlet>
+    <div class="main-content border-t w-full h-full bg-gray-50 flex">
+
+      <div *ngIf="isNavView" class=" w-max h-full ">
+        <app-side-bar />
+      </div>
+      <div #container class="container mx-auto py-6 w-full h-full">
+        <router-outlet />
       </div>
     </div>
 

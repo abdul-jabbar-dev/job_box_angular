@@ -1,0 +1,51 @@
+<div class="container mx-auto p-8 h-full overflow-y-auto">
+
+    <div class="bg-white p-8 rounded-lg shadow-md">
+
+        <div class="flex gap-x-6">
+            <!-- title -->
+            <span class="w-2/3">
+                <label [for]="'road_area'" class="font-thin text-gray-600">
+                    Job Title
+                    <span class="font-extrabold text-red-900">*</span>
+                </label>
+                <div class="custom-input-container">
+                    <input input required class="custom-input" [name]="'road_area'" placeholder="Title"
+                        [type]="'text'" />
+                </div>
+            </span>
+
+            <!-- total number of people -->
+            <span class="w-1/3">
+                <label [for]="'road_area'" class="font-thin text-gray-600">
+                    Number of people to hire for this job
+                    <span class="font-extrabold text-red-900">*</span>
+                </label>
+                <div class="custom-input-container">
+                    <input input required class="custom-input" name="road_area" placeholder="5" type="number" />
+                </div>
+            </span>
+        </div>
+
+        <!-- description -->
+        <div class="w-full ">
+            <label class="font-thin text-gray-600"></label>
+            Job Title
+            <span class="w-full h-80 custom-input-container"></span>
+        </div>
+        <div>
+<!-- 
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Number</mat-label>
+                <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field> -->
+        </div>
+    </div>
+
+</div>

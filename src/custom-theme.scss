@@ -1,0 +1,30 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+ 
+@include mat.core();
+
+ 
+$job_box-primary: mat.define-palette(mat.$indigo-palette);
+$job_box-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$job_box-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$job_box-theme: mat.define-light-theme((
+  color: (
+    primary: $job_box-primary,
+    accent: $job_box-accent,
+    warn: $job_box-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($job_box-theme);
+

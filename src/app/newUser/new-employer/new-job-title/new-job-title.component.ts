@@ -12,6 +12,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-job-title',
@@ -39,6 +40,18 @@ import {
   ],
 })
 export class NewJobTitleComponent {
+  constructor(public router:Router) {
+    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+      startWith(''),
+      map((fruit: string | null) =>
+        fruit ? this._filter(fruit) : this.allFruits.slice()
+      )
+    );
+  }
+
+  next() {
+    this.router.navigateByUrl('/dashboard')
+  }
   newEmployerJobTitle: FormGroup = new FormGroup({
     job_title: new FormControl<string>(''),
     job_title_tags: new FormControl<string[]>([]),
@@ -53,15 +66,6 @@ export class NewJobTitleComponent {
   @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement> | undefined;
   send() {
     console.log(this.newEmployerJobTitle.getRawValue());
-  }
-
-  constructor() {
-    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
-      startWith(''),
-      map((fruit: string | null) =>
-        fruit ? this._filter(fruit) : this.allFruits.slice()
-      )
-    );
   }
 
   add(event: MatChipInputEvent): void {

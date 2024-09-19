@@ -1,0 +1,47 @@
+<div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
+    class="px-6 scrollbar w-full scrollbar-custom h-full border-r-2  fixed z-30 inset-y-0 left-0  transition duration-300 transform bg-white  overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+    <div class="flex items-center justify-center mt-6">
+        <div class="flex items-center">
+            <button class="flex bg-orange shadow-sm p-1 px-8 -ml-2 rounded-md text-white  text-lg">
+                <span class="inline-flex mt-1 mr-2">
+                    <svg class="h-5 w-5  text-gray-600" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </span>
+                <a href="#" class="inline-flex text-gray-600"> New Email</a>
+            </button>
+        </div>
+    </div>
+
+    <nav class="flex flex-col mt-8 px-4 text-center">
+
+        <!--starred -->
+        <ng-container *ngFor="let tab of listSideBar">
+            <a [routerLinkActiveOptions]="{ exact: true }" [routerLink]="tab.src"
+                routerLinkActive="bg-primary-lite/10 text-primary-lite rounded-md "
+                class="relative  group my-1 flex flex-row items-center h-12 focus:outline-none hover:bg-primary-lite/10 hover:text-primary-lite text-gray-500 hover:rounded-md pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                    <mat-icon [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="text-primary-lite"
+                        class="mat-18 mx-1 w-4 h-4 fill-current text-gray-400 group-hover:text-primary-lite">
+                        {{ tab.icon }}
+                    </mat-icon>
+                </span>
+                {{ tab.title }}
+            </a>
+        </ng-container>
+
+
+        <!--end of starred -->
+        <hr class="mt-2">
+        <!--start of labels -->
+
+        <!-- <hr class="mt-2 border-1 border-gray-300"> -->
+
+        <button class="flex justify-center ">
+            <span class="font-lg pt-3 px-3">&#10096;</span>
+            <span class="font-lg pt-3">Hide menu</span>
+        </button>
+
+    </nav>
+</div>

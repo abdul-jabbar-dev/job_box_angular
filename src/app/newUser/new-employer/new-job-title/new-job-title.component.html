@@ -10,33 +10,30 @@
         <form [formGroup]="newEmployerJobTitle" (submit)="send()">
 
             <div class="flex flex-col w-full">
-
-
+ 
                 <div class="">
                     <label [for]="'job_title'" class="font-semibold">
                         Job Title
                         <span class="font-extrabold text-red-900">*</span>
                     </label>
-                    <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
+                    <div class="custom-input-container">
 
-                        <mat-icon class="h-5 w-5 text-gray-400">work</mat-icon>
+                        <mat-icon class="custom-input-icon-start">work</mat-icon>
                         <input [formControlName]="'job_title'" required
                             class="bg-transparent w-full h-full active:bg-none pl-2 outline-none py-1 border-none"
                             [name]="'job_title'" [placeholder]="'Full Stack Developer'" [type]="'text'" />
                     </div>
                 </div>
+ 
 
-
-
-                <div>
-                    
+                <div> 
                     <label [for]="'job_title_tags'" class="font-semibold">
                         Job title tags
                         <span class="font-extrabold text-red-900">*</span>
                     </label>
 
-                    <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
-                        <mat-icon class="h-5 w-5 text-gray-400">label</mat-icon>
+                    <div class="custom-input-container">
+                        <mat-icon class="custom-input-icon-start">label</mat-icon>
                         <div>
                             
                             <input [placeholder]="'React'"  [matAutocomplete]="auto" [formControlName]="'job_title_tags'" required
@@ -61,12 +58,11 @@
                         </mat-chip-row>
                     </mat-chip-grid>
                 </div>
-
-
+ 
 
             </div>
 
-            <button type="submit"
+            <button type="submit" (click)="next()"
                 class="block px-4  bg-indigo-600 mt-4 py-3 rounded-md text-white font-semibold my-2">Next</button>
 
         </form>

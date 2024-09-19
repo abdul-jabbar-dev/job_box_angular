@@ -1,15 +1,54 @@
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  @import url('https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
+.custom-input {
+  @apply bg-transparent w-full h-full pl-2 outline-none py-1 border-none text-gray-600 focus:bg-transparent;
+}
 
-  .main-content {
-    height: calc(100vh - 70px);
-    overflow: auto;
-  }
+.custom-input-container {
+  @apply flex mt-2 items-center border-2 py-3 border-gray-300 px-3 w-full rounded-md mb-4 ;
+}
 
-  * {
-    color: #1F2937;
-  }
+.custom-input-icon-start {
+  @apply h-5 w-5 text-gray-400;
+}
+
+.main-content {
+  height: calc(100vh - 70px);
+  overflow: auto;
+}
+
+* {
+  color: #1F2937;
+}
+
+
+/* Custom scrollbar styles */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f1f1f142;
+  /* Scrollbar track color */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #88888863;
+  /* Scrollbar thumb color */
+  border-radius: 10px;
+  /* Scrollbar thumb roundness */
+  border: 3px solid #f1f1f1;
+  /* Padding around thumb */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: #555555a4;
+  /* Change thumb color on hover */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

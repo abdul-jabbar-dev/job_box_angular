@@ -2,7 +2,7 @@
 
     <p class="max-w-[1000px] mx-auto text-4xl my-6">Let's start</p>
     <div class="max-w-[700px] mx-auto bg-slate-50">
-        <p class="text-2xl text-gray-600">Where are you located?</p>
+        <p class="text-2xl text-gray-600">Choose your business location</p>
         <p class="mt-4 text-gray-500">We use this to match you with jobs nearby.</p>
         <br>
         <br>
@@ -16,13 +16,11 @@
                     Address <small class="text-sm">(House/ Road/ Zone) </small>
                     <span class="font-extrabold text-red-900">*</span>
                 </label>
-                <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
+                <div class="custom-input-container">
 
-                    <mat-icon class="h-5 w-5 text-gray-400">location_city</mat-icon>
-                    <input [formControlName]="'road_area'" input required
-                        class="bg-transparent w-full h-full active:bg-none pl-2 outline-none py-1 border-none"
-                        [name]="'road_area'" [placeholder]="'House:00, Road: Bla Bla Bla, Area: Brum'"
-                        [type]="'text'" />
+                    <mat-icon class="custom-input-icon-start">location_city</mat-icon>
+                    <input [formControlName]="'road_area'" input required class="custom-input" [name]="'road_area'"
+                        [placeholder]="'House:00, Road: Bla Bla Bla, Area: Brum'" [type]="'text'" />
                 </div>
             </div>
 
@@ -35,11 +33,10 @@
                         State, City
                         <span class="font-extrabold text-red-900">*</span>
                     </label>
-                    <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
+                    <div class="custom-input-container">
 
-                        <mat-icon class="h-5 w-5 text-gray-400">location_city</mat-icon>
-                        <input [formControlName]="'state_city'" input required
-                            class="bg-transparent w-full h-full active:bg-none pl-2 outline-none py-1 border-none"
+                        <mat-icon class="custom-input-icon-start">location_city</mat-icon>
+                        <input [formControlName]="'state_city'" input required class="custom-input"
                             [name]="'state_city'" [placeholder]="'Dhaka'" [type]="'text'" />
                     </div>
                 </div>
@@ -49,11 +46,10 @@
                         Zip Code
                         <span class="font-extrabold text-red-900">*</span>
                     </label>
-                    <div class="flex mt-2 items-center border-2 py-2 border-gray-400 px-3 w-full rounded-md mb-4">
+                    <div class="custom-input-container">
 
-                        <input [formControlName]="'zip_code'" input required
-                            class="bg-transparent w-full h-full active:bg-none pl-2 outline-none py-1 border-none"
-                            [name]="'zip_code'" [placeholder]="'00000'" [type]="'text'" />
+                        <input [formControlName]="'zip_code'" input required class="custom-input" [name]="'zip_code'"
+                            [placeholder]="'00000'" [type]="'text'" />
                     </div>
                 </div>
 
